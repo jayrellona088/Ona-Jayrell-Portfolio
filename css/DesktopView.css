@@ -1,0 +1,352 @@
+:root{
+	--whiteColor: #fff;
+	--semiGreyColor :#333333;
+	--ghostWhite: #f8f8ff;
+	--lightgreen: #99BA14;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+section{
+    padding: 100px 0;
+}
+.max-width{
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+/* ------------ navbar section style  ------------ */
+.navbar{
+	position: fixed;
+	width: 100%;
+	padding: 30px 0;
+	font-family: 'Ubuntu', sans-serif;
+	transition: all 0.3s ease;
+	z-index: 999;
+}
+
+.navbar.sticky{
+	padding: 15px 0;
+	background: var(--lightgreen);
+}
+
+
+.navbar .max-width{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navbar .logo a{
+	color: var(--whiteColor);
+	font-size: 35px;
+	font-weight: 600;
+}
+
+.navbar .logo a span{
+	color: var(--lightgreen);
+}
+
+.navbar.sticky .logo a span{
+	color: var(--whiteColor);
+	transition: all 0.3s ease;
+}
+
+
+.navbar .menu li  {
+	list-style: none;
+	display: inline-block;
+}
+.navbar .menu li a {
+	color: var(--whiteColor);
+	font-size: 18px;
+	font-weight: 500;
+	margin-left: 25px;
+	transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+	color: var(--lightgreen);
+}
+
+.navbar.sticky .menu li a:hover{
+	-webkit-text-stroke: .5px white;
+}
+
+/* ------------ menu btn style  ------------ */
+.menu-btn{
+	color: var(--whiteColor);
+	font-size: 23px;
+	cursor: pointer;
+	display: none;
+}
+.scroll-up-btn{
+	position: fixed;
+	height: 45px;
+	width: 42px;
+	background: var(--lightgreen);
+	right: 30px;
+	bottom: 30px;
+	text-align: center;
+	line-height: 45px;
+	z-index: 9999;
+	font-size: 30px;
+	border-radius: 6px;
+	cursor: pointer;
+	opacity: 0;
+	pointer-events: none;
+	transition: all 0.3s ease;
+}
+
+.scroll-up-btn.show{
+	bottom: 30px;
+	opacity: 1;
+	pointer-events: auto;
+}
+
+/* ------------ home section style  ------------ */
+
+.home{
+    display: flex;
+    background: url("../image/Background.jpg") no-repeat center;
+    height: 100vh;
+    color: #fff;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width{
+  width: 100%;
+  display: flex;
+}
+.home .max-width .row{
+  margin-right: 0;
+}
+
+.home .home-content .text-1{
+	font-size: 27px;
+}
+.home .home-content .text-2{
+	font-size: 75px;
+	font-weight: 600;
+	margin-left: -3px ;
+}
+.home .home-content .text-3{
+	font-size: 40px;
+	margin:  5px 0;
+}
+
+.home .home-content .text-3 span{
+	color: var(--lightgreen);
+	font-weight: 500;
+}
+
+
+/* ---------------------- aboutme section styling ---------------------- */
+section{
+	padding: 80px 0;
+}
+.about{
+	
+	padding: 90px 90px;
+	padding-bottom: 150px;
+}
+.about .title {
+	position: relative;
+	text-align: center;
+	font-size: 40px;
+	font-weight: 500;
+	/*padding-top: 80px;*/
+	margin-bottom: 60px;
+	padding-bottom: 20px;
+	font-family: 'Ubuntu', sans-serif;
+
+}
+.about .title::before {
+	content: "";
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	width: 180px;
+	height: 3px;
+	background: #111;
+	transform: translate(-50%);
+}
+.about .title::after {
+	content: "who i am";
+	position: absolute;
+	bottom: -12px;
+	left: 50%;
+	font-size: 20px;
+	color: var(--lightgreen);
+	padding: 5px;
+	background: var(--whiteColor);
+	transform: translate(-50%);
+}
+
+.about .about-content{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-between;
+
+}
+
+.about .about-content .left{
+	width:40%;
+}
+
+.about .about-content .left img{
+	height: 400px;
+	width: 400px;
+	object-fit: cover;
+	border-radius: 6px;
+}
+
+.about .about-content .right{
+	width: 55%;
+}
+
+.about .about-content .right .text{
+	font-size: 25px;
+	font-weight: 600;
+	margin-bottom: 10px;
+	font-family: 'Ubuntu', sans-serif;
+}
+
+.about .about-content .right .text span{
+	color: var(--lightgreen);
+}
+
+.about .about-content .right p{
+	text-align: justify;
+	letter-spacing: 1px;
+	font-weight: 600;
+	font-family: 'Poppins', sans-serif;
+}
+/* ---------------------- project section styling ---------------------- */
+.projects{
+	background: var(--semiGreyColor);
+}
+
+
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: var(--whiteColor);
+	margin-bottom: 50px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+	font-family: 'Ubuntu', sans-serif;
+}
+.section-title span {
+	color: var(--lightgreen);
+}
+#projects .projects {
+	flex-direction: column;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 20px 0;
+
+}
+#projects .projects-header h1 {
+	margin-bottom: 50px;
+}
+#projects .all-projects {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#projects .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#projects .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #99BA14 0%, #2c5f2d 100%);
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+#projects .project-info h1 {
+	font-size: 4rem;
+	letter-spacing: 3px;
+	font-weight: 600;
+}
+#projects .project-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+#projects .project-info p {
+	color: white;
+	letter-spacing: 3px;
+	font-size: 18px;
+}
+#projects .project-img {
+	flex-basis: 50%;
+	height: 300px;
+	overflow: scroll  ;
+	position: relative;
+	margin-left: auto;
+  	margin-right: auto;
+  	align-items: center;
+}
+#projects .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+
+	opacity: 0.7;
+}
+#projects .project-img img {
+	transition: 0.3s ease transform;
+}
+#projects .project-item:hover .project-img img {
+	transform: scale(1.1);
+}
+
+
+@media only screen and (min-width: 768px) {
+	/* Project */
+	#projects .project-item {
+		flex-direction: row;
+	}
+	#projects .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#projects .project-item {
+		height: 600px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#projects .all-projects .project-info {
+		height: 100%;
+	}
+	#projects .all-projects .project-img {
+		height: 100%;
+	}
+
+}
